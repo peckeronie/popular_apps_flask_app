@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>App Webpage Template</title>
+</head>
+
+<body>
+    <div>
+        <h2 style="margin:5px;font-family:georgia">{{ app_store }}</h2>
+        <h2 style="margin:5px;font-family:georgia">{{ category }}</h2>
+        <p style="font-family:verdana">Top Apps of the Day:</p>
+        <ol>
+            {% for item in app_items %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+</body>
+
+</html>

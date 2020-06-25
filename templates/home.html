@@ -1,0 +1,84 @@
+<!doctype html>
+<!--
+  Popup shown when extension icon is clicked
+ -->
+<html>
+  <head>
+
+    <title>Flask Parent Template</title>
+    <style>
+      body {
+        margin: 0;
+        /* width: 400px; */
+      }
+      .header {
+       /* background-color:black; */
+       /* padding: 15px; */
+       /* color: white; */
+       text-align: center;
+       font-family:verdana;
+       }
+      .header:after {
+       content: "";
+       display: table;
+       clear: both;
+      }
+
+   .switchBtn {
+      padding: 10px;
+      width: 200px;
+      background-color: #4CAF50; /* Green background */
+      border: 1px solid green; /* Green border */
+      color: white;
+      float: center;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 0;
+      font-family:georgia;
+   }
+   .switchBtn:hover {
+    background-color: #bbb;
+   }
+
+
+    </style>
+  </head>
+  <body>
+  <div id="titleHeader" class="header">
+  <h1 style="margin:5px">Finding the Top 10 Most Popular Apps from App Stores</h1>
+  <h2 style="margin:5px;font-family:georgia">Click on a category to see the top apps.</h2>
+</div>
+
+  <h2 style="margin:5px;font-family:georgia">Apple Apps Store</h2>
+  <ul class="menu">
+    <li><a href="{{ url_for('apple_free_apps') }}">Free Apps</a></li>
+    <li><a href="{{ url_for('apple_paid_apps') }}">Paid Apps</a></li>
+    <li><a href="{{ url_for('apple_new_games') }}">New Games</a></li>
+    <li><a href="{{ url_for('apple_new_apps') }}">New Apps</a></li>
+  </ul>
+
+    <!-- <div class="btn-group">
+      <button id="apple1" class="switchBtn">Free Apps</button>
+      <button id="apple2" class="switchBtn">Paid Apps</button>
+      <button id="apple3" class="switchBtn">New Games</button>
+    </div> -->
+
+   <h2 style="margin:5px;font-family:georgia">Google Play Apps Store</h2>
+   <ul class="menu">
+     <li><a href="{{ url_for('android_free_apps') }}">Free Apps</a></li>
+     <li><a href="{{ url_for('android_paid_apps') }}">Paid Apps</a></li>
+     <li><a href="{{ url_for('android_free_games') }}">Free Games</a></li>
+     <li><a href="{{ url_for('android_paid_games') }}">Paid Games</a></li>
+   </ul>
+   <!-- <div class="btn-group">
+      <button id="android1" class="switchBtn">Free Apps</button>
+      <button id="android2" class="switchBtn">Paid Apps</button>
+      <button id="android3" class="switchBtn">Free Games</button>
+      </div> -->
+
+
+
+  </body>
+</html>
