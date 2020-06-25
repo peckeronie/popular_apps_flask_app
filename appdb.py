@@ -123,13 +123,13 @@ def daily_task():
         get_HTML_feed(g)
 
 #add new entries to database every midnight
-# schedule.every().day.at("00:00").do(daily_task)
-#
-# while True:
-#     schedule.run_pending()
-#     time.sleep(60)
+schedule.every().day.at("00:00").do(daily_task)
+
+while True:
+    schedule.run_pending()
+    time.sleep(60)
 #daily_task()
-lookup_database() 
+# lookup_database()
 
 ##test = set_category("Top Free Apps")
 ##get_RSS_feed("Top Free Apps", test)
